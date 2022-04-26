@@ -1,0 +1,26 @@
+#!/bin/bash
+#Samuel Zemen 
+#assigment3
+
+for var in $@
+do
+
+	echo "You entered $var"
+
+if [[ -d $var ]]
+then
+		ls -d -l -i $var
+		continue
+fi
+
+if [[ -f $var ]]
+then
+		ls -i -l $var
+		continue
+
+else
+	echo "Exit status value $?"
+	echo "Error found in passing Arguement."
+fi
+
+done
